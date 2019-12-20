@@ -86,3 +86,52 @@ header ul li a.active:before{
   align-items: center;
   margin-top: 50px;
 }
+.content .bannerText{
+  position: relative;
+  max-width: 500px;
+  margin-right: 50px;
+}
+.content .bannerText div{
+  display: none;
+}
+.content .bannerText div.active{
+  display: initial;
+}
+.content .bannerText h2{
+  font-size: 54px;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1.2em;
+  color: #333;
+}
+.content .bannerText p{
+  font-size: 18px;
+  color: #333;
+  line-height: 1.8em;
+  margin: 20px 0;
+}
+.content .bannerText a{
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 1px;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 15px;
+}
+.content .bannerText a:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  background: #78ff00;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+.content .bannerText a:hover:before{
+  width: 100%;
+}
