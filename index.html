@@ -24,7 +24,7 @@
       <!-- konten -->
       <div class="content">
         <!-- konten text-->
-        <div class="bannerText">
+        <div class="bannerText" id="slideshowText">
           <!-- konten 1-->
           <div class="active">
             <h2>Terang Bulan<br />Lumer</h2>
@@ -79,20 +79,34 @@
       <!-- end footer -->
     </div>
     <script type="text/javascript">
+    //slideshow konten image
       var slideshow = document.getElementById('slideshow');
       var slides = slideshow.getElementsByTagName('img');
       var index = 0;
-
       function prevSlide(){
         slides[index].classList.remove('active');
         index = (index - 1 + slides.length) % slides.length;
         slides[index].classList.add('active');
       }
-
       function nextSlide(){
         slides[index].classList.remove('active');
         index = (index + 1) % slides.length;
         slides[index].classList.add('active');
+      }
+
+      //slideshow konten text
+      var slideshowText = document.getElementById('slideshowText');
+      var slidesText = slideshowText.getElementsByTagName('div');
+      var i = 0;
+      function prevSlideText(){
+        slidesText[i].classList.remove('active');
+        i = (i - 1 + slidesText.length) % slidesText.length;
+        slidesText[i].classList.add('active');
+      }
+      function nextSlideText(){
+        slidesText[i].classList.remove('active');
+        i = (i + 1) % slidesText.length;
+        slidesText[i].classList.add('active');
       }
     </script>
   </body>
