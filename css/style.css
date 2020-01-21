@@ -2,7 +2,25 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+h6{
+  opacity: 0.5;
+}
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+th,td {
+  text-align: left;
+  padding: 10px;
+  text-align: center;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+th{
+  background-color: #78ff00;
+  color: white;
 }
 .container{
   position: relative;
@@ -103,10 +121,11 @@ header ul li a.active:before{
   font-weight: 800;
   line-height: 1.2em;
   color: #333;
+  -webkit-text-stroke: 1px white;
 }
 .content .bannerText p{
   font-size: 18px;
-  color: #333;
+  color: #000;
   line-height: 1.8em;
   margin: 20px 0;
 }
@@ -120,13 +139,14 @@ header ul li a.active:before{
   font-size: 18px;
   text-decoration: none;
   padding: 15px;
+  float: right;
 }
 .content .bannerText a:before{
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 60px;
+  width: 70px;
   height: 100%;
   background: #78ff00;
   z-index: -1;
@@ -185,4 +205,95 @@ header ul li a.active:before{
 }
 .icons .controls li:hover{
   opacity: 0.5;
+}
+.menuIcon{
+  display: none;
+}
+@media (max-width: 992px){
+  .container{
+    padding: 20px 50px;
+  }
+  .container:before{
+    display: none;
+  }
+  header{
+    padding: 0;
+  }
+  .icons .controls li{
+    filter: invert(0);
+  }
+  .content .bannerText h2{
+    font-size: 30px;
+  }
+  .content{
+    margin-top: 0;
+    flex-direction: column-reverse;
+  }
+  .content .bannerImg{
+    width: 100%;
+    height: 40vh;
+    margin: 20px 0;
+  }
+  .content .bannerText{
+    max-width: 100%;
+    padding-right: 0;
+  }
+  header ul{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    z-index: 10000;
+    padding: 100px 0;
+  }
+  header.active ul{
+    display: initial;
+  }
+  header ul li{
+    padding: 20px;
+    text-align: center;
+  }
+  header ul li a{
+    color: #333 !important;
+    font-size: 36px;
+  }
+  header ul li a:hover:before,
+  header ul li a.active:before{
+    width: 100%;
+  }
+  .menuIcon{
+    display: initial;
+    position: fixed;
+    right: 50px;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 100000;
+    background: #fff url(../img/menu.png);
+    width: 34px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-position: 6px;
+  }
+  header.active .menuIcon{
+    background: #fff url(../img/close.png);
+    background-repeat: no-repeat;
+    background-position: 6px;
+  }
+}
+@media (max-width: 767px){
+  .container{
+    padding: 20px 30px;
+  }
+  .content{
+    padding-top: 20px;
+  }
+  .menuIcon{
+    right: 30px;
+  }
+  .icons .controls li img{
+    max-width: 40px;
+  }
 }
