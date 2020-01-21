@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>MasterQ</title>
+    <link rel="stylesheet" href="../../css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <!--navbar -->
+      <header id="navbar">
+        <a href="#" class="logo">Master<span>Q</span></a>
+        <!-- menu -->
+        <ul>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../" class="active">Product</a></li>
+          <li><a href="../../about">About</a></li>
+          <li><a href="../../contact">Contact</a></li>
+        </ul>
+        <span class="menuIcon" onclick="menuToggle()"></span>
+        <!-- end menu -->
+      </header>
+      <!-- end navbar -->
+      <!-- konten -->
+      <div class="content">
+        <!-- konten text-->
+        <div class="bannerText" id="slideshowText">
+          <!-- konten 1-->
+          <div class="active">
+            <h2>Terang Bulan<br />Crispy</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">Crispy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Garing Cokelat</td>
+                  <td>40K</td>
+                </tr>
+                <tr>
+                  <td>Garing Cokelat Kacang</td>
+                  <td>40K</td>
+                </tr>
+                <tr>
+                  <td>Garing Keju</td>
+                  <td>45K</td>
+                </tr>
+                <tr>
+                  <td>Garing Cokelat Keju</td>
+                  <td>50K</td>
+                </tr>
+                <tr>
+                  <td>Garing Cokelat Kacang Keju</td>
+                  <td>50K</td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">Nutella</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Garing Nutella</td>
+                  <td>85K</td>
+                </tr>
+                <tr>
+                  <td>Garing Nutella Keju</td>
+                  <td>95K</td>
+                </tr>
+                <tr>
+                  <td>Garing Nutella Skippy</td>
+                  <td>95K</td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">Toblerone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Garing Toblerone</td>
+                  <td>85K</td>
+                </tr>
+                <tr>
+                  <td>Garing Toblerone Keju</td>
+                  <td>95K</td>
+                </tr>
+                <tr>
+                  <td>Garing Toblerone Skippy</td>
+                  <td>100K</td>
+                </tr>
+                <tr>
+                  <td>Garing Toblerone Skippy Keju</td>
+                  <td>105K</td>
+                </tr>
+
+
+              </tbody>
+            </table>
+            <br />
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">Red Velvet</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Garing Cream Cheese Oreo</td>
+                  <td>85K</td>
+                </tr>
+                <tr>
+                  <td>Garing Red Velvet Cokelat</td>
+                  <td>55K</td>
+                </tr>
+                <tr>
+                  <td>Garing Red Velvet Keju</td>
+                  <td>60K</td>
+                </tr>
+                <tr>
+                  <td>Garing Red Velvet Cokelat Keju</td>
+                  <td>50K</td>
+                </tr>
+
+              </tbody>
+            </table>
+            <br />
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">Ovomaltine</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Garing Ovomaltine</td>
+                  <td>85K</td>
+                </tr>
+                <tr>
+                  <td>Garing Ovomaltine Keju</td>
+                  <td>95K</td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <h6>Harga dalam satuan IDR dan dapat berubah sewaktu-waktu</h6>
+          </div>
+          <!-- end konten 1-->
+        </div>
+        <!-- end konten text-->
+        <!-- konten gambar-->
+        <div class="bannerImg" id="slideshow">
+          <!-- konten gambar 1-->
+          <img src="../../img/terangbulan-crispy.jpeg" class="active">
+        </div>
+        <!-- end konten gambar -->
+      </div>
+      <!-- end konten -->
+      <!-- footer -->
+      <div class="icons">
+        <!-- media sosial -->
+        <ul class="sci">
+          <li><a href="#"><img src="../../img/facebook.png"></a></li>
+          <li><a href="#"><img src="../../img/twitter.png"></a></li>
+          <li><a href="#"><img src="../../img/instagram.png"></a></li>
+        </ul>
+        <!-- end media sosial -->
+      </div>
+      <!-- end footer -->
+    </div>
+    <script type="text/javascript">
+    //slideshow konten image
+      var slideshow = document.getElementById('slideshow');
+      var slides = slideshow.getElementsByTagName('img');
+      var index = 0;
+      function prevSlide(){
+        slides[index].classList.remove('active');
+        index = (index - 1 + slides.lengtd) % slides.lengtd;
+        slides[index].classList.add('active');
+      }
+      function nextSlide(){
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.lengtd;
+        slides[index].classList.add('active');
+      }
+
+      //slideshow konten text
+      var slideshowText = document.getElementById('slideshowText');
+      var slidesText = slideshowText.getElementsByTagName('div');
+      var i = 0;
+      function prevSlideText(){
+        slidesText[i].classList.remove('active');
+        i = (i - 1 + slidesText.lengtd) % slidesText.lengtd;
+        slidesText[i].classList.add('active');
+      }
+      function nextSlideText(){
+        slidesText[i].classList.remove('active');
+        i = (i + 1) % slidesText.lengtd;
+        slidesText[i].classList.add('active');
+      }
+      function menuToggle(){
+        var nav = document.getElementById('navbar')
+        nav.classList.toggle('active')
+      }
+    </script>
+    <!-- last 45:03 menuIcon-->
+  </body>
+</html>
