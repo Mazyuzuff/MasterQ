@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterQ</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <!--navbar -->
+      <header id="navbar">
+        <a href="#" class="logo">Master<span>Q</span></a>
+        <!-- menu -->
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../product">Product</a></li>
+          <li><a href="" class="active">About</a></li>
+          <li><a href="../contact">Contact</a></li>
+        </ul>
+        <span class="menuIcon" onclick="menuToggle()"></span>
+        <!-- end menu -->
+      </header>
+      <!-- end navbar -->
+      <!-- konten -->
+      <div class="content">
+        <!-- konten text-->
+        <div class="bannerText" id="slideshowText">
+          <!-- konten 1-->
+          <div class="active">
+            <h2>About<br />Master Q</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <a href="../contact">Contact Us!</a>
+          </div>
+          <!-- end konten 1-->
+        </div>
+        <!-- end konten text-->
+        <!-- konten gambar-->
+        <div class="bannerImg" id="slideshow">
+          <!-- konten gambar 1-->
+          <img src="../img/logo-masterq.jpg" class="active">
+        </div>
+        <!-- end konten gambar -->
+      </div>
+      <!-- end konten -->
+      <!-- footer -->
+      <div class="icons">
+        <!-- media sosial -->
+        <ul class="sci">
+          <li><a href="#"><img src="../img/facebook.png"></a></li>
+          <li><a href="#"><img src="../img/twitter.png"></a></li>
+          <li><a href="#"><img src="../img/instagram.png"></a></li>
+        </ul>
+        <!-- end media sosial -->
+      </div>
+      <!-- end footer -->
+    </div>
+    <script type="text/javascript">
+    //slideshow konten image
+      var slideshow = document.getElementById('slideshow');
+      var slides = slideshow.getElementsByTagName('img');
+      var index = 0;
+      function prevSlide(){
+        slides[index].classList.remove('active');
+        index = (index - 1 + slides.length) % slides.length;
+        slides[index].classList.add('active');
+      }
+      function nextSlide(){
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+      }
+
+      //slideshow konten text
+      var slideshowText = document.getElementById('slideshowText');
+      var slidesText = slideshowText.getElementsByTagName('div');
+      var i = 0;
+      function prevSlideText(){
+        slidesText[i].classList.remove('active');
+        i = (i - 1 + slidesText.length) % slidesText.length;
+        slidesText[i].classList.add('active');
+      }
+      function nextSlideText(){
+        slidesText[i].classList.remove('active');
+        i = (i + 1) % slidesText.length;
+        slidesText[i].classList.add('active');
+      }
+      function menuToggle(){
+        var nav = document.getElementById('navbar')
+        nav.classList.toggle('active')
+      }
+    </script>
+    <!-- last 45:03 menuIcon-->
+  </body>
+</html>
