@@ -9,15 +9,16 @@
   <body>
     <div class="container">
       <!--navbar -->
-      <header>
+      <header id="navbar">
         <a href="#" class="logo">Master<span>Q</span></a>
         <!-- menu -->
         <ul>
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">Product</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="" class="active">Home</a></li>
+          <li><a href="./product">Product</a></li>
+          <li><a href="./about">About</a></li>
+          <li><a href="./contact">Contact</a></li>
         </ul>
+        <span class="menuIcon" onclick="menuToggle()"></span>
         <!-- end menu -->
       </header>
       <!-- end navbar -->
@@ -29,21 +30,21 @@
           <div class="active">
             <h2>Terang Bulan<br />Lumer</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <a href="#">Read More</a>
+            <a href="./product">Read More</a>
           </div>
           <!-- end konten 1-->
           <!-- konten 2-->
           <div>
             <h2>Terang Bulan<br />Crispy</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <a href="#">Read More</a>
+            <a href="./product">Read More</a>
           </div>
           <!-- end konten 2-->
           <!-- konten 3-->
           <div>
             <h2>Martabak<br />Yummy</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <a href="#">Read More</a>
+            <a href="./product">Read More</a>
           </div>
           <!-- end konten 3-->
         </div>
@@ -53,9 +54,9 @@
           <!-- konten gambar 1-->
           <img src="./img/2.jpg" class="active">
           <!-- konten gambar 2-->
-          <img src="./img/2b.jpg">
+          <img src="./img/terangbulan-crispy.jpeg">
           <!-- konten gambar 3-->
-          <img src="./img/2c.jpg">
+          <img src="./img/martabak.jpeg">
         </div>
         <!-- end konten gambar -->
       </div>
@@ -66,7 +67,7 @@
         <ul class="sci">
           <li><a href="#"><img src="./img/facebook.png"></a></li>
           <li><a href="#"><img src="./img/twitter.png"></a></li>
-          <li><a href="#"><img src="./img/instagram.png"></a></li>
+          <li><a href="https://www.instagram.com/masterqtop/" target="_blank"><img src="./img/instagram.png"></a></li>
         </ul>
         <!-- end media sosial -->
         <!-- navigasi -->
@@ -108,6 +109,11 @@
         i = (i + 1) % slidesText.length;
         slidesText[i].classList.add('active');
       }
+      function menuToggle(){
+        var nav = document.getElementById('navbar')
+        nav.classList.toggle('active')
+      }
     </script>
+    <!-- last 45:03 menuIcon-->
   </body>
 </html>
