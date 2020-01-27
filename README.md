@@ -1,1 +1,2 @@
-"# Proyek Magang: MasterQ" 
+#Proyek Magang: MasterQ
+* Enjoy: s.id/MasterQ
